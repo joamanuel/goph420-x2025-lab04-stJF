@@ -48,7 +48,7 @@ def main():
 
     # Define time windows
     intervals = [
-        (37, 43, "Period A: 0–30 days"),
+        (0, 30, "Period A: 0–30 days"),
         (50, 72, "Period B: 50–72 days"),
         (80, 120, "Period C: 80–120 days")
     ]
