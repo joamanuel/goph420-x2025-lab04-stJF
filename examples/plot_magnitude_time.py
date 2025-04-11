@@ -1,5 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
+plt.style.use('bmh')
+plt.rcParams['figure.figsize'] = 8, 5
+#plt.rcParams['figure.labelsize'] = 15
+rcParams["figure.subplot.hspace"] = (0.2)
 
 def load_data(file_path):
     """Load seismic data from file."""
@@ -11,7 +16,7 @@ def load_data(file_path):
 def plot_time_series(time, magnitude):
     """Plot magnitude over time."""
     plt.figure(figsize=(12, 5))
-    plt.plot(time, magnitude, '.', markersize=2, color='black')
+    plt.plot(time, magnitude, '.', markersize=2, color='green')
     plt.xlabel("Time (days)")
     plt.ylabel("Magnitude")
     plt.title("Microseismic Magnitude vs Time")

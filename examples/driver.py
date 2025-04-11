@@ -3,6 +3,11 @@ import os
 sys.path.append(os.path.abspath("../src"))
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
+plt.style.use('bmh')
+plt.rcParams['figure.figsize'] = 8, 5
+#plt.rcParams['figure.labelsize'] = 15
+rcParams["figure.subplot.hspace"] = (0.2)
 from lab_04.regression import multi_regress
 
 def load_data(file_path):
@@ -43,9 +48,9 @@ def main():
 
     # Define time windows
     intervals = [
-        (0, 5, "Period A: 0–25 days"),
-        (20, 80, "Period B: 40–60 days"),
-        (115, 120, "Period C: 100–120 days")
+        (37, 43, "Period A: 0–30 days"),
+        (50, 72, "Period B: 50–72 days"),
+        (80, 120, "Period C: 80–120 days")
     ]
 
     fig, axes = plt.subplots(1, 3, figsize=(18, 5), sharey=True)
